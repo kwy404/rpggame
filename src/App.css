@@ -1,0 +1,92 @@
+body{
+  background: #000;
+  user-select: none;
+}
+
+.world{
+  width: 80px;
+  height: fit-content;
+  image-rendering: pixelated;
+  background: #000;
+  transform: scale(5) translate(-50%);
+  padding: 4px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.bloco{
+  height: 10px;
+  width: 10px;
+  float: left;
+  position: relative;
+  margin-top: 0px;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.5);
+  background-size: cover;
+}
+
+.bloco--grass{
+  background-image: url('https://i.pinimg.com/474x/38/24/17/382417b60104d16330ea6933754a658b--aniversario-minecraft--bit.jpg');
+}
+
+.bloco--water{
+  background-image: url('https://i.pinimg.com/236x/7f/39/c5/7f39c55042808b3064364db03df40ac0--minecraft-blocks-minecraft-bedroom.jpg');
+  animation: 2s bloco infinite linear;
+}
+
+.player:hover{
+  filter: opacity(0.6) !important;
+}
+
+.npc{
+  filter: opacity(0.8) !important;
+}
+
+.player{
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/350b91f0-ad9d-4d63-9a0d-a10361c3b685/d6gfouv-d8377271-7f1b-4256-8dca-8263f3e7a64b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM1MGI5MWYwLWFkOWQtNGQ2My05YTBkLWExMDM2MWMzYjY4NVwvZDZnZm91di1kODM3NzI3MS03ZjFiLTQyNTYtOGRjYS04MjYzZjNlN2E2NGIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.RhtpRNEMCTlvxgzHQ0XWb-bTV8BwzfppdRjjqlOYx50');
+  background-size: cover;
+  z-index: 10;
+  position: absolute;
+  /* Fix position on player */
+  margin-top: -9px;
+  margin-left: -7px;
+  transform: scale(0.5) rotate(1deg);
+  height: 12px;
+  box-shadow: 1px 2px 1px transparent;
+  transition: 0.2s ease-in;
+  filter: opacity(1);
+  cursor: pointer;
+}
+
+.player span{
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,.9);
+  font-size: 4px;
+  margin-top: 12px;
+  position: absolute;
+}
+
+.bloco--bridge{
+  background-image: url(https://opengameart.org/sites/default/files/styles/medium/public/preview_625.png);
+  background-position: 0px 39px;
+  background-size: cover;
+  z-index: 1;
+  box-shadow: none;
+  background-color: #3295d6;
+  transform: scale(1.05);
+}
+
+@keyframes bloco {
+  0%{
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,.10));
+  }
+  50%{
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,.20));
+  }
+  70%{
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,.10));
+  }
+  100%{
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,.20));
+  }
+}
